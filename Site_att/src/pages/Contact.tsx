@@ -8,7 +8,10 @@ import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import { MapPin, Phone, Mail, Clock, Send, Instagram, Facebook } from "lucide-react";
 import contactHeroImg from "@/assets/images/Imagem_Pagina__contato.jpg";
+import logoBanner from "@/assets/images/newl.png";
 import divisorImg from "@/assets/images/Divisor.png";
+import eyesBanner from "@/assets/images/teste1.png";
+import logoNoBack from "@/assets/images/logo_no_back.png";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -45,20 +48,27 @@ const Contact = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section className="py-20 bg-gradient-to-br from-accent via-background to-muted overflow-hidden">
-        <div className="container mx-auto px-4">
+      <section className="py-24 bg-gradient-to-br from-primary/20 via-accent to-primary/5 relative overflow-hidden">
+        {/* Decorative Eyes Banner - positioned at top, very translucent */}
+        <div className="absolute inset-x-0 top-0 opacity-[0.25] pointer-events-none overflow-hidden h-full">
+          <img src={eyesBanner} alt="" className="w-full h-auto object-cover object-top scale-[6] translate-y-28 translate-x-0 lg:scale-[1.6] lg:translate-y-8 lg:translate-x-12" />
+        </div>
+
+        {/* Centered Logo Background - full height, translucent */}
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+          <img src={logoNoBack} alt="" className="h-80 lg:h-full w-auto opacity-[0.40] translate-x-56 scale-[2.2] lg:translate-x-96 lg:scale-[2.88]" />
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-2xl mx-auto text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
             >
-              <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary font-medium text-sm mb-4">
-                Contato
-              </span>
               <h1 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-6">
                 Entre em Contato
               </h1>
-              <p className="text-xl text-muted-foreground">
+              <p className="text-xl text-foreground/80">
                 Estamos prontos para atender você e seu pet. Entre em contato
                 para agendar uma consulta ou tirar suas dúvidas.
               </p>
@@ -71,7 +81,7 @@ const Contact = () => {
       <img src={divisorImg} alt="" className="w-full" />
 
       {/* Contact Content */}
-      <section className="py-20">
+      <section className="py-20 overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16">
             {/* Contact Form */}
@@ -80,7 +90,7 @@ const Contact = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <div className="bg-card p-8 rounded-2xl shadow-elevated">
+              <div className="bg-card p-4 sm:p-6 lg:p-8 rounded-2xl shadow-elevated">
                 <h2 className="font-heading text-2xl font-bold text-foreground mb-6">
                   Envie uma Mensagem
                 </h2>
@@ -231,7 +241,7 @@ const Contact = () => {
                     <h4 className="font-heading font-semibold text-foreground mb-1">E-mail</h4>
                     <a
                       href="mailto:contato@oftalmologiaanimal.com.br"
-                      className="text-primary hover:text-primary-dark transition-colors"
+                      className="text-primary hover:text-primary-dark transition-colors break-all"
                     >
                       contato@oftalmologiaanimal.com.br
                     </a>
@@ -253,7 +263,7 @@ const Contact = () => {
               </div>
 
               {/* Social */}
-              <div className="flex items-center gap-4">
+              <div className="flex flex-wrap items-center gap-4">
                 <a
                   href="https://instagram.com/oftalmologiaanimal"
                   target="_blank"
@@ -286,7 +296,7 @@ const Contact = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="w-full h-[400px] rounded-2xl overflow-hidden shadow-elevated"
+            className="w-full max-w-full h-[280px] sm:h-[350px] lg:h-[400px] rounded-2xl overflow-hidden shadow-elevated"
           >
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.0373!2d-47.5574!3d-22.4149!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjLCsDI0JzUzLjYiUyA0N8KwMzMnMjYuNiJX!5e0!3m2!1spt-BR!2sbr!4v1699999999999!5m2!1spt-BR!2sbr"

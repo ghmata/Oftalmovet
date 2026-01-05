@@ -1,14 +1,23 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Phone, Calendar } from "lucide-react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const CTASection = () => {
+  const navigate = useNavigate();
+
+  const handleContactClick = () => {
+    navigate("/contato");
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }, 50);
+  };
+
   return (
     <section className="py-20 relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 gradient-hero opacity-95" />
-      
+
       {/* Decorative elements */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-primary-foreground/10 rounded-full blur-3xl" />
       <div className="absolute bottom-0 left-0 w-72 h-72 bg-primary-foreground/10 rounded-full blur-3xl" />
@@ -24,7 +33,7 @@ const CTASection = () => {
             Agende uma Avaliação Oftalmológica para seu PET
           </h2>
           <p className="text-primary-foreground/80 text-lg mb-10 max-w-2xl mx-auto">
-            Cuide da visão do seu melhor amigo com um especialista. 
+            Cuide da visão do seu melhor amigo com um especialista.
             Entre em contato e agende uma consulta personalizada.
           </p>
 
@@ -48,12 +57,10 @@ const CTASection = () => {
               variant="outline"
               size="xl"
               className="w-full sm:w-auto border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground"
-              asChild
+              onClick={handleContactClick}
             >
-              <Link to="/contato">
-                <Calendar className="w-5 h-5" />
-                Página de Contato
-              </Link>
+              <Calendar className="w-5 h-5" />
+              Página de Contato
             </Button>
           </div>
         </motion.div>

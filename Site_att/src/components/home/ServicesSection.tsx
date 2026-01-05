@@ -72,7 +72,7 @@ const ServicesSection = () => {
                   <img
                     src={service.image}
                     alt={service.title}
-                    className="w-full max-h-48 object-cover rounded-xl mb-4 group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-32 sm:h-40 lg:h-48 object-cover rounded-xl mb-4 group-hover:scale-105 transition-transform duration-500"
                   />
                 )}
                 <h3 className="font-heading font-bold text-xl text-foreground mb-2">

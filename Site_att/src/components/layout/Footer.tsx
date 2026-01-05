@@ -10,7 +10,9 @@ const Footer = () => {
   // Navigate to page and scroll to top
   const handleNavigate = (path: string) => {
     navigate(path);
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }, 50);
   };
 
   // Navigate to section on same page or different page
@@ -40,7 +42,7 @@ const Footer = () => {
   return (
     <footer className="bg-foreground text-primary-foreground">
       <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Logo & About */}
           <div className="space-y-4">
             <button onClick={() => handleNavigate("/")} className="flex items-center gap-3">
@@ -148,7 +150,7 @@ const Footer = () => {
                   className="flex items-center gap-3 hover:text-primary transition-colors"
                 >
                   <Mail className="w-5 h-5 text-primary shrink-0" />
-                  <span className="text-sm">contato@oftalmologiaanimal.com.br</span>
+                  <span className="text-sm break-all">contato@oftalmologiaanimal.com.br</span>
                 </a>
               </li>
             </ul>

@@ -5,7 +5,10 @@ import { Calendar, ArrowRight } from "lucide-react";
 import blogImage1 from "@/assets/images/B1.png";
 import blogImage2 from "@/assets/images/B2.png";
 import blogImage3 from "@/assets/images/B3.png";
+import logoBanner from "@/assets/images/newl.png";
 import divisorImg from "@/assets/images/Divisor.png";
+import eyesBanner from "@/assets/images/teste1.png";
+import logoNoBack from "@/assets/images/logo_no_back.png";
 
 export const blogPosts = [
   {
@@ -38,20 +41,28 @@ const Blog = () => {
   return (
     <Layout>
       {/* Hero */}
-      <section className="py-20 bg-gradient-to-br from-accent via-background to-muted">
-        <div className="container mx-auto px-4">
+      <section className="py-24 bg-gradient-to-br from-primary/20 via-accent to-primary/5 relative overflow-hidden">
+        {/* Decorative Eyes Banner - positioned at top, very translucent */}
+        <div className="absolute inset-x-0 top-0 opacity-[0.25] pointer-events-none overflow-hidden h-full">
+          <img src={eyesBanner} alt="" className="w-full h-auto object-cover object-top scale-[6] translate-y-28 translate-x-0 lg:scale-[1.6] lg:translate-y-8 lg:translate-x-12" />
+        </div>
+
+        {/* Centered Logo Background - full height, translucent */}
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+          <img src={logoNoBack} alt="" className="h-80 lg:h-full w-auto opacity-[0.40] translate-x-56 scale-[2.2] lg:translate-x-96 lg:scale-[2.88]" />
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="text-center max-w-3xl mx-auto"
           >
-            <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary font-medium text-sm mb-4">
-              Blog
-            </span>
+
             <h1 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-6">
               Artigos e Informações
             </h1>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-xl text-foreground/80">
               Conteúdo educativo sobre saúde ocular animal para tutores conscientes
             </p>
           </motion.div>

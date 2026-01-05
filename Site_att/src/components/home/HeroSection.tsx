@@ -49,7 +49,7 @@ const HeroSection = () => {
                 </div>
               </div>
 
-              <ul className="space-y-3 text-muted-foreground">
+              <ul className="space-y-2 text-muted-foreground text-sm md:text-base">
                 <li className="flex items-start gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
                   <span>Graduado em Medicina Veterinária pela Universidade de Marília</span>
