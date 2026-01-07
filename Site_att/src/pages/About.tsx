@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { Award, BookOpen, GraduationCap, Heart, Eye, Stethoscope } from "lucide-react";
-import aboutImage from "@/assets/images/Apresentacao_2.jpeg";
+import aboutImage from "@/assets/images/Foto apresentacao.jpg";
 import divisorImg from "@/assets/images/Divisor.png";
 import logoDecor from "@/assets/images/Logo_completa.png";
 import eyesBanner from "@/assets/images/teste1.png";
@@ -72,7 +72,7 @@ const About = () => {
                   Uma paixão pela saúde visual animal
                 </h2>
                 <p className="text-muted-foreground leading-relaxed">
-                  Com mais de 15 anos de experiência em medicina veterinária,
+                  Com mais de 10 anos de experiência em medicina veterinária,
                   o Dr. Leonardo Balthazar dedica sua carreira ao cuidado especializado
                   da saúde ocular de animais de companhia.
                 </p>
@@ -85,7 +85,7 @@ const About = () => {
 
               <div className="space-y-4">
                 <h3 className="font-heading text-xl font-semibold text-foreground">
-                  Formação Acadêmica
+                  Formação
                 </h3>
                 <div className="space-y-3">
                   <div className="flex items-start gap-3">
@@ -104,6 +104,18 @@ const About = () => {
                     <BookOpen className="w-5 h-5 text-primary mt-1" />
                     <p className="text-muted-foreground">
                       Especialização em Oftalmologia e Microcirurgia Ocular
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <BookOpen className="w-5 h-5 text-primary mt-1" />
+                    <p className="text-muted-foreground">
+                      Curso Avançado de Cirurgia de Catarata
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <BookOpen className="w-5 h-5 text-primary mt-1" />
+                    <p className="text-muted-foreground">
+                      Curso de Cirurgia Avançada de Córnea
                     </p>
                   </div>
                 </div>

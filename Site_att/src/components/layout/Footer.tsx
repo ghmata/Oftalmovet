@@ -58,7 +58,9 @@ const Footer = () => {
             </button>
             <p className="text-primary-foreground/70 text-sm leading-relaxed">
               Cuidado especializado para a saúde ocular do seu pet.
-              Atendimento com excelência em Rio Claro e região.
+            </p>
+            <p className="text-primary-foreground/70 text-sm leading-relaxed">
+              <span className="font-medium">Cidades atendidas:</span> Rio Claro, Araras, São Pedro, Pirassununga, Piracicaba, Charqueada, Leme e Região.
             </p>
             <p className="text-primary-foreground/50 text-sm">
               CRMV-SP 36.811
@@ -166,7 +168,7 @@ const Footer = () => {
                 <Phone className="w-5 h-5 text-primary group-hover:text-primary-foreground" />
               </a>
               <a
-                href="https://instagram.com/oftalmologiaanimal"
+                href="https://instagram.com/medvetleonardofiorio"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center hover:bg-primary transition-colors group"

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Award, Stethoscope, Eye } from "lucide-react";
-import heroImage from "@/assets/images/Foto apresentacao.jpg";
+import heroImage from "@/assets/images/Apresentacao_2.jpeg";
 
 const HeroSection = () => {
   return (
@@ -33,7 +33,14 @@ const HeroSection = () => {
             <p className="text-lg text-muted-foreground max-w-lg leading-relaxed">
               Tratamento especializado em oftalmologia clínica, cirúrgica e
               microcirurgia ocular para cães, gatos e animais exóticos.
-              Atendimento em Rio Claro e região.
+              Atendimento em Rio Claro e{" "}
+              <span className="relative inline-block group">
+                <span className="text-primary cursor-pointer border-b border-dashed border-primary">região</span>
+                <span className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 px-4 py-2 bg-foreground text-primary-foreground text-sm rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 whitespace-nowrap z-50">
+                  Rio Claro, Araras, São Pedro, Pirassununga,<br />Piracicaba, Charqueada, Leme e Região
+                  <span className="absolute left-1/2 -translate-x-1/2 top-full w-0 h-0 border-l-8 border-r-8 border-t-8 border-l-transparent border-r-transparent border-t-foreground"></span>
+                </span>
+              </span>.
             </p>
 
             {/* Credentials */}
@@ -45,7 +52,7 @@ const HeroSection = () => {
                 </div>
                 <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium">
                   <Stethoscope className="w-4 h-4" />
-                  <span>+15 anos de experiência</span>
+                  <span>+10 anos de experiência</span>
                 </div>
               </div>
 

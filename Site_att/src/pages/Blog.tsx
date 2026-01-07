@@ -63,7 +63,7 @@ const Blog = () => {
               Artigos e Informações
             </h1>
             <p className="text-xl text-foreground/80">
-              Conteúdo educativo sobre saúde ocular animal para tutores conscientes
+              Artigos e Informativos para Tutores e Médicos Veterinários
             </p>
           </motion.div>
         </div>

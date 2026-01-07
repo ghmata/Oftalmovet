@@ -19,7 +19,7 @@ const LocationSection = () => {
             Venha nos Visitar
           </h2>
           <p className="text-muted-foreground">
-            Estamos localizados em Rio Claro - SP, com fácil acesso e estacionamento
+            Cidades atendidas: Rio Claro, Araras, São Pedro, Pirassununga, Piracicaba, Charqueada, Leme e Região
           </p>
         </motion.div>
 
@@ -115,12 +115,12 @@ const LocationSection = () => {
                 Acompanhe nosso trabalho no Instagram
               </p>
               <a
-                href="https://instagram.com/oftalmologiaanimal"
+                href="https://instagram.com/medvetleonardofiorio"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-primary hover:text-primary-dark transition-colors font-semibold"
               >
-                @oftalmologiaanimal
+                @medvetleonardofiorio
               </a>
             </div>
           </motion.div>
